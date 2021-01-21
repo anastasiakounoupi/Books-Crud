@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to bottom right,rgb(204, 83, 133) , #a71f53);
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff;
+  padding: 3rem; }
+
+ h1{
+  text-align: center;
+  font-size: 5rem;
+}
+
+#error{
+  font-size: 1.5rem;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.edit, #delete{
+  height: 3rem;
+  background-color:white;
+  color: rgb(204, 83, 133);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem;
+  margin: 1rem 2rem 0 2rem;
+  cursor: pointer;
+}
+
+.edit-small{
+  width: 10%;
+}
+
+.edit:hover, #delete:hover{
+  background-color: #fff;
+  color: rgb(204, 83, 133);
+  border-bottom: 1px solid rgb(204, 83, 133);
+}
+
+/* 
+form{
+  width: 30%;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+} */
+
+
+input{
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: .7rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  width: 60%;
+  transition: all .1s;
+  background-color: #ecf0f0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  outline: none;
+} 
+
+.book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 3rem 2rem;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . .";
+}
+
+a{
+  text-decoration: none;
+  color: rgb(204, 83, 133);
+}
+
+
+.book{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #fff;
+  color: black;
+  background-size: cover;
+  background-position: top;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 50% 20% / 10% 40%;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+  transition: transform .4s ease-out;
+}
+
+.book-single{
+  width: 20%;
+}
+
+.book:hover{
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+.book--icon{
+  font-size: 6rem;
+  background-image: linear-gradient(to right,rgb(204, 83, 133) , #a71f53);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
