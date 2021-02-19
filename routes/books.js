@@ -45,7 +45,7 @@ router.get('/b/edit/:id', (req, res, next) => {
         if (err) {
             res.render('books', { title: 'Books - ERROR', books: '', message: '' });
         } else {
-            res.render('editBook', { title: 'Books', books: result, id });
+            res.render('editBook', { title: 'Edit Book', books: result, id });
         }
     });
 })

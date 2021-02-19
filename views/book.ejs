@@ -25,7 +25,8 @@
 
         <div class="btns"><a href="http://localhost:3000/books/b/edit/<%= books[0].id%>" class="edit">Edit</a>
             <form method="POST" action="?_method=DELETE">
-                <button id="delete">Delete</button>
+                <button id="delete"
+                    onclick="return confirm('Are you sure you want to delete this item')">Delete</button>
             </form>
         </div>
 

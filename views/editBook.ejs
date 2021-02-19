@@ -17,7 +17,7 @@
     <h1>
         <%= title %>
     </h1>
-    <form action="?_method=PATCH" method="post">
+    <form action="?_method=PATCH" method="post" class="editform">
         <section>
             <label for="author">Edit Author Name:</label>
             <input type="text" id="author" placeholder="Author" name="author" value="<%= books[0].author %>">
