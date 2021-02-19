@@ -8,8 +8,22 @@ router.get('/', function (req, res, next) {
         if (err) {
             res.render('books', { title: 'Books - ERROR', books: '', message: '' });
         } else {
+
             console.log(rows);
             res.render('books', { title: 'Books', books: rows, message: req.query.message });
+        }
+    });
+});
+
+router.get('/test', function (req, res, next) {
+    const title = 'titletest';
+    const author = 'authortest';
+    const query = `INSERT INTO cb12ptjs.books (title, author) VALUES ('${title}', '${author}');`
+    dbconnection.query(query, (err, result) => {
+        if (err) {
+            res.render('addBook', { title: 'Books - ERROR inserting Data into DB' });
+        } else {
+            res.redirect('/');
         }
     });
 });
